@@ -1,0 +1,32 @@
+Roles of different Files:
+
+angular.json : It is our project configuration. It defines our project's build targets, file paths, comprises of many styles, scripts that are often used in our this project.
+
+tsconfig.json : It is the TypeScript compiler configuration shared across the entire workspace and work based on it.
+
+tsconfig.app.json : this is the Typescript compiler setting that is mainly is for building application
+
+package.json : it contains the npm dependencies, some CLI scripts and basic information
+
+src /
+    main.ts : when we we give command for ng serve it exutes this files and acts as a entry point. Angular builds the application starting from main.ts
+
+    app/
+        app.config.ts :  Standalone app configuration file that registers global providers (router, HTTP client, etc.)
+
+        app.component.ts : it is the root component of our app.
+
+        index.html : it the single HTML page that hosts our app.
+
+
+After build:
+/dist  : folder is created
+    /browser :
+        /fevicon.ico
+        /index.html
+        /main-W5ZDTH5R.js  : it has the compiled application code
+        /styles-5INURTSO.css
+    3rdpartylicenses.txt
+    prerendered-routes.json
+
+Budgets in angular.json : maximumWarning:500kb - this mean production will be done but will give a warn amd ,maximumError: 1MB - build will fail
